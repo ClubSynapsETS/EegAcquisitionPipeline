@@ -19,11 +19,10 @@ public class PanneauChaines extends JPanel
 
     private void creerChainesSingulieres()
     {
-        for(int i = 0; i < chaines.length; i++)
-        {
+        for(int i = 0; i < 2; i++) {
             chaines[i] = new PanneauChaineSinguliere();
-            chaines[i].setMinimumSize(new Dimension(getHeight()/8, getWidth()));
-            chaines[i].setPreferredSize(new Dimension(getHeight()/8, getWidth()));
+            chaines[i].setMinimumSize(new Dimension(getHeight() / 8, getWidth()));
+            chaines[i].setPreferredSize(new Dimension(getHeight() / 8, getWidth()));
             add(chaines[i]);
         }
     }

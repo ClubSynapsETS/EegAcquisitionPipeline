@@ -1,25 +1,21 @@
 package SynapsEts.FixedChallenge2017.Vue;
 
-import java.awt.Image;
-import java.awt.event.ActionEvent;
 import javax.imageio.ImageIO;
-import javax.swing.Box;
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
-import javax.swing.JMenu;
-import javax.swing.JMenuBar;
-import javax.swing.JMenuItem;
-import javax.swing.JToolBar;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
 
 public class MenuPrincipal extends JMenuBar
 {
     private static final long serialVersionUID = 1L;
+    private final String messageAPropos = "Interface de visualisation en temps réel des signaux EEG filtrés : \n\n" +
+            "Affichage des signaux en voltage et en fréquence. \n" +
+            "Sauvegarde en CSV.";
 
     public MenuPrincipal() {
         setBackground(PaletteCouleurs.menuBackground);
         creerMenuOptions();
         creerMenuMode();
-        creerMenuLecture();
     }
 
     private void creerMenuOptions() {
@@ -38,6 +34,8 @@ public class MenuPrincipal extends JMenuBar
         JButton aPropos = new JButton();
         //TODO - Ouvrir une nouvelle fenetre affichant les informations du projet
         aPropos.addActionListener((ActionEvent e) -> {
+            JOptionPane.showMessageDialog(getTopLevelAncestor(),
+                    messageAPropos);
 
         });
 
